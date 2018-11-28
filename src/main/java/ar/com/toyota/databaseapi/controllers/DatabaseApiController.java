@@ -31,9 +31,9 @@ public class DatabaseApiController {
         ResponseEntity<StatusApi> response;
 
         if(dbserv.addOne(solicitudRemis) == "1"){
-            response = new ResponseEntity<StatusApi>(new StatusApi("200", "OK"), HttpStatus.OK)
+            response = new ResponseEntity<StatusApi>(new StatusApi("200", "OK"), HttpStatus.OK);
         } else {
-            response = new ResponseEntity<StatusApi>(new StatusApi("500", "Internal Server Error"), HttpStatus.INTERNAL_SERVER_ERROR)
+            response = new ResponseEntity<StatusApi>(new StatusApi("500", "Internal Server Error"), HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
         return response;
